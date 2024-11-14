@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Widget with Timer</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%; /* เต็มหน้าจอ */
+      display: flex;
+      justify-content: center; /* จัดกลางแนวนอน */
+      align-items: center; /* จัดกลางแนวตั้ง */
+      flex-direction: column;
+      background-color: #000; /* เปลี่ยนพื้นหลังเป็นสีดำ */
+      color: #fff; /* ตัวอักษรเป็นสีขาว */
+    }
+
+    .container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* ใช้ความกว้างเต็มจอ */
+    }
+
+    .widgets {
+      display: flex;
+      flex-direction: row; /* จัดวางวิดเจ็ตในแนวนอน */
+      width: 100%; /* ความกว้างรวมของวิดเจ็ต */
+      justify-content: flex-start; /* วางจากซ้ายสุด */
+    }
+
+    .widget-donate {
+      margin-left: 0; /* ไม่มีระยะห่างจากซ้ายสุด */
+    }
+
+    .widget-goal {
+      margin-left: auto; /* ดันให้เป้าหมายไปทางขวา */
+      margin-right: 5px; /* ไม่มีระยะห่างจากขวา */
+    }
+
+    .timer {
+      font-size: 75px; /* ขนาดของเวลา */
+      margin-bottom: 10px; /* ลดระยะห่างจากวิดเจ็ต */
+    }
+
+    iframe {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ตัวนับเวลา -->
+    <div class="timer">
+      <iframe src="https://tikfinity.zerody.one/widget/timer?cid=1008449"
+              style="width: 200%; height: 57px;"></iframe>
+    </div>
+
+    <!-- วิดเจ็ต -->
+    <div class="widgets">
+      <!-- Widget โดเนท -->
+      <div class="widget-donate">
+        <iframe src="https://widget.ezdn.app/?user_id=a16e0364-853d-4e48-8d95-18d78128fad0&token=7dbefe807bdcd5dff977ebe66d1511ac669a6d009355814ac49d7a2fdff235ae&type=donate"
+                style="width: 120%; height: 228px;"></iframe>
+      </div>
+
+      <!-- Widget เป้าหมาย -->
+      <div class="widget-goal">
+        <iframe src="https://widget.ezdn.app/?user_id=a16e0364-853d-4e48-8d95-18d78128fad0&token=7b0e513dba1dcce9b0cccccf2d81ae0c84078da72c8f6e31abc762d43e0594f4&type=goal"
+                style="width: 134%; height: 190px;"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
